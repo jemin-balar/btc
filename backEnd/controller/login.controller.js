@@ -14,7 +14,7 @@ async function userLogin(req, res) {
             return res.status(400).json({ message: "user not found" });
         }
         const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
-        return res.status(200).json({ message: "Login successful", token: token });
+        return res.status(200).json({code: 200, message: "Login successful", token: token });
     } catch (error) {
         console.log(error);
         return res.status(500).json({ message: error.message });
