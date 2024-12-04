@@ -5,7 +5,7 @@ dotenv.config();
 
 async function userRegistration(req, res) {
     try {
-        const { name, password } = req.body;
+        const { name, password, jabber } = req.body;
 
         if (!name || !password) {
             return res.status(400).json({ message: "Please fill all the fields" });
@@ -16,7 +16,7 @@ async function userRegistration(req, res) {
             return res.status(400).json({ message: "User already exists" });
         }
 
-        const newUser = new signup_user({ name, password });
+        const newUser = new signup_user({ name, password, jabber });
 
         await newUser.save();
 

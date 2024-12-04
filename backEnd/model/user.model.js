@@ -8,6 +8,9 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String
     },
+    jabber: {
+        type: String
+    },
     created_At: {
         type: Date,
         default: new Date()
