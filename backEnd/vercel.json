@@ -6,8 +6,26 @@
       "use": "@vercel/node"
     },
     {
+      "src": "./model/user.model.js",
+      "use": "@vercel/node"
+    },
+    {
       "src": "./routes/user.routes.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "./controller/login.controller.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "./controller/registration.controller.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/"
     }
   ]
 }
