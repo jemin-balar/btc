@@ -8,51 +8,327 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+<body id="topup" class="h-scroll bg-black">
+    <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark   ">
+        <div class="container ">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Dropdown
-                        </a>
+                data-bs-target="#navbarResponsive_top" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive_top">
+                <ul id="nav__top" class="navbar-nav">
+                    <li class="nav-item"><a href="#" class="nav-link">News</a></li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
+                            aria-expanded="false">CCS/Fullz <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Buy CCS/FUllz</a></li>
+                            <li><a class="dropdown-item" href="#">Cart CCS/Fullz</a></li>
+                            <li><a class="dropdown-item" href="#">Orders CCS/Fullz</a></li>
+                            <li><a class="dropdown-item" href="#">Binlookup</a></li>
+                            <li><a class="dropdown-item" href="#">Bin Preorder</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                            href="#">Dumps <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Buy Dumps</a></li>
+                            <li><a class="dropdown-item" href="#">Cart Dumps</a></li>
+                            <li><a class="dropdown-item" href="#">Orders Dumps</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                            href="#">Proxy/Socks 5 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Buy Socks 5</a></li>
+                            <li><a class="dropdown-item" href="#">Orders Socks 5</a></li>
+                            <li><a class="dropdown-item" href="#">Buy proxy</a></li>
+                            <li><a class="dropdown-item" href="#">Orders proxies</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                            href="#">Rent SIM/Receive SMS <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Rent SIM</a></li>
+                            <li><a class="dropdown-item" href="#">Receive SMS</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link">Lottery</a></li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                            href="#">SSN/DOB <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Buy SSN/DOB</a></li>
+                            <li><a class="dropdown-item" href="#">Orders SSN/DOB</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                            href="#">Accounts <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Buy Accounts</a></li>
+                            <li><a class="dropdown-item" href="#">Orders Accounts</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                            href="#">Billing <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Topup</a></li>
+                            <li><a class="dropdown-item" href="#">History</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
+                            aria-expanded="false">Support <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">My tickets</a></li>
+                            <li><a class="dropdown-item" href="#">Create ticket</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
+                            aria-expanded="false">Profile <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="./login.html">Logout</a></li>
+                        </ul>
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
             </div>
         </div>
-    </nav>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    </div>
+    <div class="alpha60">
+        <div class="container">
+            <div>
+                <div class="label label-default"
+                    style="display:block;float:left;margin-left:5px;color:#B8B8B8;border:2px #262626 solid; padding: 0 5px">
+                    <a><span style="font-size:18px;text-decoration:underline"><strong style="color:red">SELLER?</strong>
+                            <strong style="font-weight:700;color:#6F3">SELL YOUR
+                                STUFF WITH US</strong></span></a>
+                </div>
+            </div>
+            <div class="checker-info">Balance: <strong style="font-size:14px;color:#32CD32">$0</strong></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="top__alert">
+            <div id="yw4">
+                <div class=" alertboxfor alert alert-danger alert-dismissible fade show">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    <h3>Attention please:</h3><strong>Your account is not activated yet</strong><br><strong>Current
+                        registration cost:</strong> $50<br>* Money will be debited automatically when you topup your
+                    balance on any amount.
+                </div>
+            </div>
+        </div>
+        <div class="alertboxfor">
+            <div id="yw5" class="tabbable tabs-above active bg-black">
+                <ul class="nav nav-tabs navbarcolor" role="menu">
+                    <li class="nav-item" role="presentation"><a data-bs-toggle="tab" class="nav-link active"
+                            tabindex="-1" role="tab" href="#bitcoin" aria-selected="true"><img src="img/bitcoin.svg"
+                                alt="" style="width:16px"> BITCOIN</a></li>
+                    <li class="nav-item" role="presentation"><a data-bs-toggle="tab" tabindex="-1" role="tab"
+                            class="nav-link" href="#monero" aria-selected="false"><img src="img/monero.svg" alt=""
+                                style="width:16px"> MONERO</a></li>
+                </ul>
+                <div class="tab-content ">
+                    <div id="bitcoin" class="tab-pane fade in active show" role="tabpanel">
+                        <div class="card">
+                            <div class="card-body alert">
+                                <h4>Please send your payment of BTC to Bitcoin address:</h4><b><span
+                                        style="color:gren;font-size:20px">Notice: Every time, when you want to Topup,
+                                        please, check address on this page. It will be changed every time after each
+                                        transaction.</span></b><br><br><b>Exchange fee is 3%. You need to 2
+                                    confirmations of transaction in the system to deposit money to your
+                                    account.</b><br><br>
+                                <div class="alert alert-success">
+                                    <h4 class="mb-0"><strong>13U7GMBqaA84rVRpU9YQtDHowH1ksWXtrr</strong></h4>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-9 " style="color:#fff">
+                                        <h4><strong>1BTC = $<span class="btc_course">103346</span></strong></h4>Payments
+                                        from Bitcoin's takes about 10-15 mins, please contact with support if you don't
+                                        receive your funds only after 15 mins.<br><br>To fill up your shop balance with
+                                        BTC payment you need to:<br><br>1- Send coins to your address shown above (you
+                                        can send as many separate payments as you want - they all will be added to your
+                                        balance)<br>2- After your transaction(s) get 2 confirmations - your balance will
+                                        be added to your account automatically.<br><br>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div id="" class="pull-right"
+                                            style="width:100px; height:100px; border:1px solid #CCC; position:relative">
+                                            <img style="width:200px; height: 200px; object-fit: cover;"
+                                                src="./img/share_2024-12-05_15_50_02_434.png">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="alert">Transactions waiting confirmation:<br>
+                                    <div id="Transactions" class="grid-view">
+                                        <div>
+                                            <div class="table-responsive">
+                                                <table class="items table table-striped table-bordered table-condensed">
+                                                    <thead>
+                                                        <tr id="bgcolor">
+                                                            <th id="bgcolor">Date</th>
+                                                            <th id="bgcolor">Address/batch/amount</th>
+                                                            <th id="bgcolor">Confirmations</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td colspan="3" class="empty"><span class="empty">no
+                                                                    unconfirmed transactions yet</span></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="monero" class="tab-pane fade" role="tabpanel">
+                        <div class="card">
+                            <div class="card-body alert">
+                                <h4>Please send your payment of XMR to Monero address:</h4><b><span
+                                        style="color:gren;font-size:20px">Notice: Every time, when you want to Topup,
+                                        please, check address on this page. It will be changed every time after each
+                                        transaction.</span></b><br><br><b>Exchange fee is 3%. You need to 2
+                                    confirmations of transaction in the system to deposit money to your
+                                    account.</b><br><br>
+                                <div class="alert alert-success">
+                                    <div style="word-break:break-all;font-size:2rem">temporary not available</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-9" style="color:#FFF">
+                                        <h4><strong>1XMR = $<span class="xmr_course">197.79</span></strong></h4>Payments
+                                        from Monero takes about 5-10 mins.<br><br>To fill up your shop balance with XMR
+                                        payment you need to:<br><br>1- Send coins to your address shown above (you can
+                                        send as many separate payments as you want - they all will be added to your
+                                        balance)<br>2- After your transaction(s) get 2 confirmations - your balance will
+                                        be added to your account automatically.<br><br>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div id="" class="pull-right"
+                                            style="width:100px; height:100px; border:1px solid #CCC; position:relative">
+                                            <img style="width:200px; height: 200px; object-fit: cover;"
+                                                src="./img/share_2024-12-05_15_50_02_434.png">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="alert">Transactions waiting confirmation:<br>
+                                    <div id="Transactions" class="grid-view">
+                                        <div>
+                                            <div class="table-responsive">
+                                                <table class="items table table-striped table-bordered table-condensed">
+                                                    <thead>
+
+                                                        <tr id="bgcolor">
+                                                            <th id="bgcolor">Date</th>
+                                                            <th id="bgcolor">Address/batch/amount</th>
+                                                            <th id="bgcolor">Confirmations</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td colspan="3" class="empty"><span class="empty">no
+                                                                    unconfirmed transactions yet</span></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="height:100px"></div>
+    </div>
+
+    <!-- <div id="modal__start" class="modal fade form-popup h-scroll" data-bs-backdrop="true" tabindex="-1" role="dialog"
+        aria-labelledby="modal__start" style="padding-right: 17px; display: none; padding-left: 17px;"
+        aria-modal="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Moving to blockchain and Tor</h4>
+                </div>
+                <div class="modal-body">
+                    <p><span style="color: #ff0000;"><strong>This domain may become unavailable at any
+                                time.</strong></span></p>
+                    <p><span style="color: #ff0000;"><strong>Access vclub using any of these links:</strong></span></p>
+                    <ul>
+                        <li><a href="#">http://vclubccvd426icndg43sjpaowcdkiatcmdfj3zw4mc2z6zwbhvecwmyd.onion</a></li>
+                        <li><a href="#">http://vclubccvpbtfcpbhl7itbzygzuusjd4vkws2mlljc22taooolfocyeyd.onion</a></li>
+                        <li><a href="#">http://vclub.lib/</a></li>
+                    </ul>
+                    <p><span style="color: #ffffff;">To open .onion domains install the</span> <a
+                            href="https://www.torproject.org/" target="_blank">TOR Browser</a>.</p>
+                    <p><span style="color: #ffffff;">To open .lib domains install one of these browser
+                            extensions:</span></p>
+                    <ul>
+                        <li><a href="https://fri-gate.org/" target="_blank">friGate Light</a> <span
+                                style="color: #ffffff;">is the best choice</span></li>
+                        <li><a href="https://fri-gate.org/" target="_blank">friGate CDN</a> – <span
+                                style="color: #ffffff;">an alternative</span></li>
+                        <li><a href="https://blockchain-dns.info/" target="_blank">Blockchain-DNS</a> – <span
+                                style="color: #ffffff;">another alternative</span></li>
+                        <li><a href="https://peername.com/browser-extension/" target="_blank">PeerName</a> – <span
+                                style="color: #ffffff;">another alternative</span></li>
+                    </ul>
+                    <p><span style="color: #ff0000;">Do not enter just "vclub.lib" into the address bar! This will
+                            trigger browser search operation. Instead, enter either:</span></p>
+                    <ul>
+                        <li><a href="#">Vclub.lib/</a> <span style="color: #ffffff;">(with a slash at the end),
+                                or</span>&nbsp;<a>http://vclub.lib/</a></li>
+                        <li></li>
+                        <li><span style="color: #ff0000;"><strong>Access vclub using WHITELINK links:</strong></span>
+                        </li>
+                        <li><a href="#" target="_blank">Clubv.at</a> <span style="color: #ffffff;">(with a slash at the
+                                end), or</span>&nbsp;</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="modal__close" class="btn btn-primary">Continue to shop</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+        crossorigin="anonymous"></script>
+    <!-- <script>
+        $(document).ready(function () {
+            $('#qr__btc').html('<img src="./img/share_2024-12-05_15_50_02_434.pn">');
+        });
+    </script> -->
+    <script src="js/cp.js"></script>
+    <script src="js/captcha.js"></script>
+    <script src="js/custom.js"></script>
+
+
+
+
+
+    <div id="veepn-breach-alert"></div>
+    <style>
+        @font-face {
+            font-family: FigtreeVF;
+            src: url(chrome-extension://majdfhpaihoncoakbjgbdhglocklcgno/fonts/FigtreeVF.woff2) format("woff2 supports variations"), url(chrome-extension://majdfhpaihoncoakbjgbdhglocklcgno/fonts/FigtreeVF.woff2) format("woff2-variations");
+            font-weight: 100 1000;
+            font-display: swap
+        }
+    </style>
 </body>
 
 </html>

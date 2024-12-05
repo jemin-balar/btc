@@ -6,7 +6,8 @@ dotenv.config();
 async function userRegistration(req, res) {
     try {
         const { name, password, jabber } = req.body;
-
+        console.log(req.body);
+        
         if (!name || !password) {
             return res.status(400).json({ message: "Please fill all the fields" });
         }
