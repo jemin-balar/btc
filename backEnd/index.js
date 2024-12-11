@@ -11,7 +11,7 @@ const port = 9000;
 app.use(express.json());
 app.use(express.json());
 app.use(cors({
-    origin: 'https://api.uniteshopes.com/',
+    origin: '*',
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
     allowedHeaders: ['Content-Type', 'Authorization'], //Allowed headers
 }));
