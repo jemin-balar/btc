@@ -9,7 +9,7 @@ dotenv.config();
 const port = 9000;
 
 app.use(express.json());
-app.use(cors());
+app.use(cors('https://api.uniteshopes.com/'));
 
 connectDB('mongodb+srv://balarjemin701:NIbdBFj85j0OmEYM@cluster0.ysgez0m.mongodb.net/btc?retryWrites=true&w=majority&appName=Cluster0').then(() => console.log('Connected to MongoDB'));
 
