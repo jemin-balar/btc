@@ -5,64 +5,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
+    <link rel="stylesheet" href="./style.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-black text-white min-h-screen flex justify-center pt-[50px]">
 
-    <div class="w-full max-w-sm mx-auto sm-px-[5px]  text-center px-4">
-        <p class="text-sm mb-6">
-            Registration: <span class="text-green-400">Open</span>, Registration Fee:
-            <span class="text-yellow-400">$50</span>
+    <div class="w-full max-w-sm mx-auto sm-px-[5px]  text-center px-4 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <p class="text-sm mb-6" style="color: #adafae;">
+            Registration: <strong>Open</strong>, Registration Fee:
+            <strong>$50</strong>
         </p>
-        <form id="loginForm" class="space-y-4">
+        <div class="flex justify-center">
+        <form id="loginForm" class="space-y-4 w-[70%]">
             <input 
                 type="text" 
                 id="username" 
                 placeholder="Username*" 
-                class="w-full p-2 bg-black border border-gray-600 text-white rounded focus:outline-none focus:ring focus:ring-blue-500" 
+                class="w-full p-2 bg-black border border-gray-600 text-white rounded focus:outline-none focus:ring focus:ring-blue-500 inputElement" 
             />
             <input 
                 type="password" 
                 id="password" 
                 placeholder="Password*" 
-                class="w-full p-2 bg-black border border-gray-600 text-white rounded focus:outline-none focus:ring focus:ring-blue-500" 
+                class="w-full p-2 bg-black border border-gray-600 text-white rounded focus:outline-none focus:ring focus:ring-blue-500 inputElement" 
             />
-            <div class="flex flex-col sm:flex-row gap-4 items-center">
+            <div class="flex flex-row gap-1 items-center">
                 <!-- CAPTCHA Input Field -->
                     <input 
                     type="text" 
                     id="captchaInput" 
-                    placeholder="Enter CAPTCHA*" 
-                    class="w-full sm:w-1/2 p-2 bg-black border border-gray-600 text-white rounded focus:outline-none focus:ring focus:ring-blue-500" 
+                    placeholder="Captcha*" 
+                    class="w-full sm:w-1/2 p-2 bg-black border border-gray-600 text-white rounded focus:outline-none focus:ring focus:ring-blue-500 inputElement" 
                 />
                 <!-- CAPTCHA Display -->
                 <button 
                     type="button"
-                    class="w-full sm:w-1/2 bg-white text-black py-2 rounded-md font-bold text-center relative"
+                    class="w-full sm:w-1/2 bg-white text-black py-0.5 rounded-md font-bold text-center relative"
                     id="refreshCaptcha"
                 >
-                    <div id="captchaDisplay"></div>
+                    <div id="captchaDisplay" class="w-max m-auto px-1"></div>
                 </button>
             </div>
     
-            <div class="flex flex-col sm:flex-row gap-4 mt-4">
+            <div class="flex flex-row gap-1 mt-4">
                 <button 
                     type="button" 
                     id="loginButton"
-                    class="flex-1 bg-black border border-green-600 hover:bg-green-600 text-white py-3 rounded-[30px] font-semibold"
+                    class="flex-1 bg-black border border-green-600 hover:bg-green-600 text-white py-2 rounded-[30px] font-semibold green btn btn-secondary loginBtn"
                 >
                     Login
                 </button>
                 <a 
                     href="./registration.html"
-                    class="flex-1 bg-black border border-blue-600 hover:bg-blue-600 text-white py-3 rounded-[30px] font-semibold text-center"
+                    class="flex-1 bg-black border hover:bg-blue-600 text-white py-2 rounded-[30px] font-semibold text-center registerBtn"
                 >
                     Registration
                 </a>
             </div>
         </form>
-        <p class="w-full text-sm mt-6">
+    </div>
+        <!-- <p class="w-full text-sm mt-6">
             Dear customers: If you lost your password, please contact
             <a href="mailto:support@www-unitedshop.su" class="text-blue-400 underline">
                 support@www-unitedshop.su
@@ -71,10 +74,34 @@
         <p class="text-sm mt-2">
             If you want to be our <span class="text-green-400">seller</span>,
             <a href="#" class="text-blue-400 underline">register here</a>.
+        </p> -->
+        <p class="text-md mt-2" style="color: #adafae;">
+            Forgot your password use
+            <a href="#" class="text-blue-400"> this form</a>.
         </p>
+          <div x-data="{ open: false, selected: 'Français', flag: './icons/france.png' }" class="relative inline-block text-left mt-2">
+            <button @click="open = !open" class="bg-gray-800 text-white font-medium py-2 px-4 rounded-md inline-flex items-center space-x-2">
+              <img :src="flag" class="w-6 h-4" />
+              <span x-text="selected"></span>
+              <svg class="ml-2 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </button>
+            <div x-show="open" @click.away="open = false" class="absolute right-0 mt-2 w-48 bg-gray-800 text-white rounded-md shadow-lg">
+              <a href="#" @click="selected = 'English'; flag = './icons/english.png'; open = false" class="flex items-center px-4 py-2 text-sm hover:bg-gray-700">
+                <img src="./icons/english.png" class="w-6 h-4"> English
+              </a>
+              <a href="#" @click="selected = 'Русский'; flag = './icons/russia.png'; open = false" class="flex items-center px-4 py-2 text-sm hover:bg-gray-700">
+                <img src="./icons/russia.png" class="w-6 h-4"> Русский
+              </a>
+              <a href="#" @click="selected = 'Français'; flag = './icons/france.png'; open = false" class="flex items-center px-4 py-2 text-sm hover:bg-gray-700">
+                <img src="./icons/france.png" class="w-6 h-4"> Français
+              </a>
+            </div>
+          </div>          
     </div>
     
-
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
     <script>
         // Generate a random CAPTCHA with distortions and noise
         function generateCaptcha() {

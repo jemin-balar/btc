@@ -197,6 +197,21 @@
     padding-bottom: 4px;
 }
 
+.registerBtn {
+    border: 2px solid #00a3df;
+    padding: 7px 5px;
+    margin: auto;
+}
+
+.loginBtn {
+    border-color: #7cfc00 !important;
+    background: rgba(124, 252, 0, 0.1) !important;
+}
+
+.inputElement {
+    border: 1px solid #aed1b2 !important;
+}
+
 @media (max-width: 768px) {
     .mt-100px_small {
     margin-top: 100px;
@@ -205,3 +220,4 @@
         font-size: 12px !important;
     }
 }  
+
