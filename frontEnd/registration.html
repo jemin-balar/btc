@@ -112,7 +112,7 @@
             const result = await response.json();
             if (response.ok && result.code === 200) {
                 localStorage.setItem('authToken', result.token);
-                window.location.href = '/frontEnd/index.html';
+                window.location.href = 'index.html';
                 // alert(result.message);
             } else {
                 alert(`Error: ${result.message || result.error}`);
