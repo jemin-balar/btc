@@ -9,12 +9,10 @@ async function userLogin(req, res) {
         if (!name || !password) {
             return res.status(400).json({ message: "Please fill all the fields" });
         }
-        const user = await user_signin.findOne({ name: name, password: password });
-        if (!user) {
-            return res.status(400).json({ message: "user not found" });
-        }
-        const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
-        return res.status(200).json({code: 200, message: "Login successful", token: token });
+        const tokan = Math.floor(Math.random() * 1000000000);
+        return res.status(200).json({ code: 200, message: "Login successful", tokan });
+
+
     } catch (error) {
         console.log(error);
         return res.status(500).json({ message: error.message });
