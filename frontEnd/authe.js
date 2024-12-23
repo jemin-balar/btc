@@ -2,15 +2,15 @@ document.addEventListener("DOMContentLoaded", function () {
     var authToken = localStorage.getItem("authToken");
     var currentPath = window.location.pathname;
 
-    var publicRoutes = ["/frontEnd/login.html", "/frontEnd/registration.html"];
+    var publicRoutes = ["login.html", "registration.html"];
 
     if (!authToken) {
         if (!publicRoutes.includes(currentPath)) {
-            window.location.href = "/frontEnd/login.html";
+            window.location.href = "login.html";
         }
     } else {
         if (publicRoutes.includes(currentPath)) {
-            window.location.href = "/frontEnd/index.html";
+            window.location.href = "index.html";
         } else {
             var menu = document.getElementById("menu");
             if (menu) {
@@ -24,5 +24,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function logout() {
     localStorage.removeItem("authToken");
-    window.location.href = "/frontEnd/login.html";
+    window.location.href = "login.html";
 }

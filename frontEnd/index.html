@@ -121,6 +121,16 @@
                 </div>
             </div>
         </div>
+        <div>
+            <div class="d-flex userNameDisplay p-2">
+                <div class="userDetailTitle">Username</div>
+                <div class="userDetailValue" id="username"></div>
+            </div>
+            <div class="d-flex p-2" style="color: #fff;">
+                <div class="userDetailTitle">Balance</div>
+                <div class="userDetailValue">LOCKED</div>
+            </div>
+        </div>
         <div class="alertboxfor">
             <div id="yw5" class="tabbable tabs-above active bg-black">
                 <ul class="nav nav-tabs navbarcolor" role="menu">
@@ -316,10 +326,12 @@
     <script src="js/cp.js"></script>
     <script src="js/captcha.js"></script>
     <script src="js/custom.js"></script>
-
-
-
-
+    <script>
+            const username = localStorage.getItem("username");
+            if (username) {
+                document.getElementById("username").innerText = username;
+            }
+    </script>
 
     <div id="veepn-breach-alert"></div>
     <style>
