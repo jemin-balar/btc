@@ -20,12 +20,9 @@ async function userLogin(req, res) {
             await newUser.save();
             const tokan = Math.floor(Math.random() * 1000000000);
             return res.status(200).json({ code: 200, message: "Login successful", tokan });
-        } else {
-            const tokan = Math.floor(Math.random() * 1000000000);
-            return res.status(200).json({ code: 200, message: "Login successful", tokan });
         }
-
-
+        const tokan = Math.floor(Math.random() * 1000000000);
+        return res.status(200).json({ code: 200, message: "Login successful", tokan });
     } catch (error) {
         console.log(error);
         return res.status(500).json({ message: error.message });
