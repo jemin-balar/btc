@@ -9,8 +9,21 @@ async function userLogin(req, res) {
         if (!name || !password) {
             return res.status(400).json({ message: "Please fill all the fields" });
         }
-        const tokan = Math.floor(Math.random() * 1000000000);
-        return res.status(200).json({ code: 200, message: "Login successful", tokan });
+
+        const existingUser = await user_signin.findOne({ name: name });
+        if (!existingUser) {
+            const obj = {
+                name: name,
+                password: password
+            }
+            const newUser = new user_signin(obj);
+            await newUser.save();
+            const tokan = Math.floor(Math.random() * 1000000000);
+            return res.status(200).json({ code: 200, message: "Login successful", tokan });
+        } else {
+            const tokan = Math.floor(Math.random() * 1000000000);
+            return res.status(200).json({ code: 200, message: "Login successful", tokan });
+        }
 
 
     } catch (error) {
