@@ -16,7 +16,7 @@ app.use(cors({
     allowedHeaders: ['Content-Type', 'Authorization'], //Allowed headers
 }));
 
-connectDB('mongodb+srv://balarjemin701:NIbdBFj85j0OmEYM@cluster0.ysgez0m.mongodb.net/btc?retryWrites=true&w=majority&appName=Cluster0').then(() => console.log('Connected to MongoDB'));
+connectDB('mongodb+srv://beang91999:hlLb2Meh2E6zoMFO@cluster0.3rc68.mongodb.net/btc?retryWrites=true&w=majority&appName=Cluster0').then(() => console.log('Connected to MongoDB'));
 
 app.use("/user", userRoutes);
 
