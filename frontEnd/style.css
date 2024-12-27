@@ -148,6 +148,8 @@
     color: #fff !important;
 }
 
+
+
 .alert-success {
     background-color: #77b300 !important;
     border-color: #77b300 !important;
@@ -241,5 +243,7 @@
     .userDetailValue {
         width: 50%;
     }
+    .alert-monero{
+        margin-top: 100px !important;
+    }
 }  
-
